@@ -1,9 +1,11 @@
 import time
 
-import archinstall
-from archinstall import profile, info
+from archinstall.lib.output import info
+from archinstall.lib.profile.profiles_handler import profile_handler
+from archinstall.lib.storage import storage
+from archinstall.tui import Tui
 
-for _profile in profile.profile_handler.get_mac_addr_profiles():
+for _profile in profile_handler.get_mac_addr_profiles():
 	# Tailored means it's a match for this machine
 	# based on it's MAC address (or some other criteria
 	# that fits the requirements for this machine specifically).
@@ -11,8 +13,8 @@ for _profile in profile.profile_handler.get_mac_addr_profiles():
 
 	print('Starting install in:')
 	for i in range(10, 0, -1):
-		print(f'{i}...')
+		Tui.print(f'{i}...')
 		time.sleep(1)
 
-	install_session = archinstall.storage['installation_session']
+	install_session = storage['installation_session']
 	_profile.install(install_session)

@@ -1,37 +1,39 @@
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, List
 
-import archinstall
-from archinstall import info
-from archinstall import Installer, ConfigurationOutput
 from archinstall.default_profiles.minimal import MinimalProfile
-from archinstall.lib.interactions import suggest_single_disk_layout, select_devices
-from archinstall.lib.models import Bootloader, User
-from archinstall.lib.profile import ProfileConfiguration, profile_handler
-from archinstall.lib import disk
+from archinstall.lib.args import ArchConfig, arch_config_handler
+from archinstall.lib.configuration import ConfigurationOutput
+from archinstall.lib.disk.disk_menu import DiskLayoutConfigurationMenu
+from archinstall.lib.disk.encryption_menu import DiskEncryptionMenu
+from archinstall.lib.disk.filesystem import FilesystemHandler
+from archinstall.lib.installer import Installer
+from archinstall.lib.models import Bootloader
+from archinstall.lib.models.device_model import (
+	DiskLayoutConfiguration,
+)
+from archinstall.lib.models.network_configuration import NetworkConfiguration
+from archinstall.lib.models.profile_model import ProfileConfiguration
+from archinstall.lib.models.users import Password, User
+from archinstall.lib.output import debug, error, info
+from archinstall.lib.profile.profiles_handler import profile_handler
+from archinstall.tui import Tui
 
-if TYPE_CHECKING:
-	_: Any
 
+def perform_installation(mountpoint: Path) -> None:
+	config: ArchConfig = arch_config_handler.config
 
-info("Minimal only supports:")
-info(" * Being installed to a single disk")
+	if not config.disk_config:
+		error("No disk configuration provided")
+		return
 
-if archinstall.arguments.get('help', None):
-	info(" - Optional disk encryption via --!encryption-password=<password>")
-	info(" - Optional filesystem type via --filesystem=<fs type>")
-	info(" - Optional systemd network via --network")
-
-
-def perform_installation(mountpoint: Path):
-	disk_config: disk.DiskLayoutConfiguration = archinstall.arguments['disk_config']
-	disk_encryption: disk.DiskEncryption = archinstall.arguments.get('disk_encryption', None)
+	disk_config: DiskLayoutConfiguration = config.disk_config
+	disk_encryption = config.disk_encryption
 
 	with Installer(
 		mountpoint,
 		disk_config,
 		disk_encryption=disk_encryption,
-		kernels=archinstall.arguments.get('kernels', ['linux'])
+		kernels=config.kernels
 	) as installation:
 		# Strap in the base system, add a boot loader and configure
 		# some other minor details as specified by this profile and user.
@@ -39,16 +41,20 @@ def perform_installation(mountpoint: Path):
 			installation.set_hostname('minimal-arch')
 			installation.add_bootloader(Bootloader.Systemd)
 
-			# Optionally enable networking:
-			if archinstall.arguments.get('network', None):
-				installation.copy_iso_network_config(enable_services=True)
+			network_config: NetworkConfiguration | None = config.network_config
+
+			if network_config:
+				network_config.install_network_config(
+					installation,
+					config.profile_config
+				)
 
 			installation.add_additional_packages(['nano', 'wget', 'git'])
 
 			profile_config = ProfileConfiguration(MinimalProfile())
 			profile_handler.install_profile_config(installation, profile_config)
 
-			user = User('devel', 'devel', False)
+			user = User('devel', Password(plaintext='devel'), False)
 			installation.create_users(user)
 
 	# Once this is done, we output some useful information to the user
@@ -58,49 +64,39 @@ def perform_installation(mountpoint: Path):
 	info(" * devel (password: devel)")
 
 
-def prompt_disk_layout():
-	fs_type = None
-	if filesystem := archinstall.arguments.get('filesystem', None):
-		fs_type = disk.FilesystemType(filesystem)
+def _minimal() -> None:
+	with Tui():
+		disk_config = DiskLayoutConfigurationMenu(disk_layout_config=None).run()
 
-	devices = select_devices()
-	modifications = suggest_single_disk_layout(devices[0], filesystem_type=fs_type)
+		disk_encryption = None
+		if disk_config:
+			disk_encryption = DiskEncryptionMenu(disk_config).run()
 
-	archinstall.arguments['disk_config'] = disk.DiskLayoutConfiguration(
-		config_type=disk.DiskLayoutType.Default,
-		device_modifications=[modifications]
-	)
+		arch_config_handler.config.disk_config = disk_config
+		arch_config_handler.config.disk_encryption = disk_encryption
 
+	config = ConfigurationOutput(arch_config_handler.config)
+	config.write_debug()
+	config.save()
 
-def parse_disk_encryption():
-	if enc_password := archinstall.arguments.get('!encryption-password', None):
-		modification: List[disk.DeviceModification] = archinstall.arguments['disk_config']
-		partitions: List[disk.PartitionModification] = []
+	if arch_config_handler.args.dry_run:
+		exit(0)
 
-		# encrypt all partitions except the /boot
-		for mod in modification:
-			partitions += list(filter(lambda x: x.mountpoint != Path('/boot'), mod.partitions))
+	if not arch_config_handler.args.silent:
+		with Tui():
+			if not config.confirm_config():
+				debug('Installation aborted')
+				_minimal()
 
-		archinstall.arguments['disk_encryption'] = disk.DiskEncryption(
-			encryption_type=disk.EncryptionType.Luks,
-			encryption_password=enc_password,
-			partitions=partitions
+	if arch_config_handler.config.disk_config:
+		fs_handler = FilesystemHandler(
+			arch_config_handler.config.disk_config,
+			arch_config_handler.config.disk_encryption
 		)
 
+		fs_handler.perform_filesystem_operations()
 
-prompt_disk_layout()
-parse_disk_encryption()
+	perform_installation(arch_config_handler.args.mountpoint)
 
-config_output = ConfigurationOutput(archinstall.arguments)
-config_output.show()
 
-input(str(_('Press Enter to continue.')))
-
-fs_handler = disk.FilesystemHandler(
-	archinstall.arguments['disk_config'],
-	archinstall.arguments.get('disk_encryption', None)
-)
-
-fs_handler.perform_filesystem_operations()
-
-perform_installation(archinstall.storage.get('MOUNT_POINT', Path('/mnt')))
+_minimal()

@@ -3,33 +3,37 @@
 #  Rafael Fontenelle <rafaelff@gnome.org>
 #  Jefferson Michael <github.com/jeffersonjpr>
 #  Diogo Silva <github.com/Diogo-ss>
+#  Mário Victor Ribeiro Silva <github.com/ComicShrimp>
+#  Rafael Fontenelle <rafaelff@gnome.org>, 2023.
+#  Luis Antonio <github.com/ruisuantonio>, 2025.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: archinstall\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Mário Victor Ribeiro Silva <github.com/ComicShrimp>\n"
+"PO-Revision-Date: 2025-02-06 23:14-0300\n"
+"Last-Translator: Luis Antonio <github.com/ruisuantonio>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid "[!] A log file has been created here: {} {}"
-msgstr "[!] Um arquivo de log foi criado aqui: {} {}"
+msgstr "[!] Um arquivo de registro foi criado aqui: {} {}"
 
 msgid "    Please submit this issue (and file) to https://github.com/archlinux/archinstall/issues"
 msgstr "    Por favor, envie este problema (e o arquivo) para: https://github.com/archlinux/archinstall/issues"
 
 msgid "Do you really want to abort?"
-msgstr "Deseja realmente abortar?"
+msgstr "Você realmente quer abortar?"
 
 msgid "And one more time for verification: "
-msgstr "E mais uma vez para verificação: "
+msgstr "Adicione mais uma vez para verificação: "
 
 msgid "Would you like to use swap on zram?"
-msgstr "Deseja usar swap em zram?"
+msgstr "Gostaria de usar swap em zram?"
 
 msgid "Desired hostname for the installation: "
 msgstr "Nome do computador (hostname) desejado para a instalação: "
@@ -38,7 +42,7 @@ msgid "Username for required superuser with sudo privileges: "
 msgstr "Nome de usuário requerido para superusuário com privilégios sudo: "
 
 msgid "Any additional users to install (leave blank for no users): "
-msgstr "Algum outro usuário para adicionar (deixe em branco para ignorar): "
+msgstr "Algum usuário para adicional para instalar (deixe em branco para ignorar): "
 
 msgid "Should this user be a superuser (sudoer)?"
 msgstr "Este usuário deve ser um superusuário? (sudoer)?"
@@ -74,13 +78,13 @@ msgid "Select one network interface to configure"
 msgstr "Selecione uma interface de rede para configurar"
 
 msgid "Select which mode to configure for \"{}\" or skip to use default mode \"{}\""
-msgstr "Selecione qual modo configurar para \"{}\" ou ignore para usar o modo padrão \"{}\""
+msgstr "Selecione qual modo configurar para \"{}\" ou pule para usar o modo padrão \"{}\""
 
 msgid "Enter the IP and subnet for {} (example: 192.168.0.5/24): "
 msgstr "Digite o IP e a sub-rede para {} (exemplo: 192.168.0.5/24): "
 
 msgid "Enter your gateway (router) IP address or leave blank for none: "
-msgstr "Digite o seu IP de gateway (router) ou deixe em branco para nenhum: "
+msgstr "Digite o seu IP de gateway (roteador) ou deixe em branco para nenhum: "
 
 msgid "Enter your DNS servers (space separated, blank for none): "
 msgstr "Digite os servidores DNS (separados por espaço, deixe em branco para nenhum): "
@@ -105,7 +109,7 @@ msgid "Enter the start location (in parted units: s, GB, %, etc. ; default: {}):
 msgstr "Digite o local inicial (em unidades do parted: s, GB, %, etc. ; padrão: {}): "
 
 msgid "Enter the end location (in parted units: s, GB, %, etc. ; ex: {}): "
-msgstr "Digite o local final (em unidades do parted: s, GB, %, etc. ; padrão: {}): "
+msgstr "Digite o local final (em unidades do parted: s, GB, %, etc. ; exemplo: {}): "
 
 msgid "{} contains queued partitions, this will remove those, are you sure?"
 msgstr "{} contém partições em fila, isto irá removê-las, tem certeza?"
@@ -856,9 +860,8 @@ msgstr "Os perfis devem ter nomes únicos, mas foram encontradas definições de
 msgid "Select one or more devices to use and configure"
 msgstr "Selecione um ou mais dispositivos para usar e configurar"
 
-#, fuzzy
 msgid "If you reset the device selection this will also reset the current disk layout. Are you sure?"
-msgstr "Se você redefinir a seleção de unidades isso também redefinirá o layout da unidade atual. Tem certeza?"
+msgstr "Se você redefinir a seleção de dispositivo isso também redefinirá o layout do dispositivo atual. Tem certeza?"
 
 msgid "Existing Partitions"
 msgstr "Partições existentes"
@@ -887,9 +890,8 @@ msgstr "Remova todas as partições recém-adicionadas"
 msgid "Assign mountpoint"
 msgstr "Atribuir um ponto de montagem"
 
-#, fuzzy
 msgid "Mark/Unmark to be formatted (wipes data)"
-msgstr "Marcar/Desmarcar uma partição para ser formatada (apaga os dados)"
+msgstr "Marcar/Desmarcar para ser formatada (apaga os dados)"
 
 msgid "Mark/Unmark as bootable"
 msgstr "Marcar/desmarcar como inicializável"
@@ -897,9 +899,8 @@ msgstr "Marcar/desmarcar como inicializável"
 msgid "Change filesystem"
 msgstr "Mudar arquivo do sistema"
 
-#, fuzzy
 msgid "Mark/Unmark as compressed"
-msgstr "Marcar/desmarcar a partição como comprimida (apenas btrfs)"
+msgstr "Marcar/desmarcar como comprimida (apenas btrfs)"
 
 msgid "Set subvolumes"
 msgstr "Definir subvolumes"
@@ -961,9 +962,8 @@ msgstr "Selecione a opção de encriptação de disco"
 msgid "Select a FIDO2 device to use for HSM"
 msgstr "Selecione um dispositivo FIDO2 para usar como HSM"
 
-#, fuzzy
 msgid "Use a best-effort default partition layout"
-msgstr "Apagar todos os discos selecionados e usar um esquema de partições padrão de melhor desempenho"
+msgstr "Usar um esquema de partições padrão de melhor desempenho"
 
 msgid "Manual Partitioning"
 msgstr "Particionamento manual"
@@ -1060,9 +1060,8 @@ msgstr ""
 msgid "Graphics driver"
 msgstr "Driver gráfico"
 
-#, fuzzy
 msgid "Greeter"
-msgstr "Recepcionista"
+msgstr "Greeter"
 
 msgid "Please chose which greeter to install"
 msgstr "Por favor, escolha qual greeter instalar"
@@ -1097,11 +1096,9 @@ msgstr "Digite o nome (deixe em branco para pular): "
 msgid "Enter url (leave blank to skip): "
 msgstr "Digite a url (deixe em branco para pular): "
 
-#, fuzzy
 msgid "Select signature check option"
 msgstr "Selecione uma opção de verificação de assinatura"
 
-#, fuzzy
 msgid "Select signature option"
 msgstr "Selecione uma opção de assinatura"
 
@@ -1151,9 +1148,8 @@ msgstr "Localidades"
 msgid "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
 msgstr "Usar NetworkManager (necessário para configurar internet graficamente no GNOME e KDE)"
 
-#, fuzzy
 msgid "Total: {} / {}"
-msgstr "Tamanho total: {}"
+msgstr "Total: {} / {}"
 
 msgid "All entered values can be suffixed with a unit: B, KB, KiB, MB, MiB..."
 msgstr "Todos os valores inseridos podem ser seguidos por uma unidade: B, KB, KiB, MB, MiB..."
@@ -1161,13 +1157,11 @@ msgstr "Todos os valores inseridos podem ser seguidos por uma unidade: B, KB, Ki
 msgid "If no unit is provided, the value is interpreted as sectors"
 msgstr "Se nenhuma unidade for fornecida, o valor será interpretado como setores"
 
-#, fuzzy
 msgid "Enter start (default: sector {}): "
-msgstr "Digite o setor de início (padrão: {}): "
+msgstr "Digite o início (padrão: setor {}): "
 
-#, fuzzy
 msgid "Enter end (default: {}): "
-msgstr "Digite o setor de início (padrão: {}): "
+msgstr "Digite fim (padrão: {}): "
 
 msgid "Unable to determine fido2 devices. Is libfido2 installed?"
 msgstr "Incapaz de determinar dispositivos FIDO2. O libfido2 está instalado?"
@@ -1181,44 +1175,37 @@ msgstr "Fabricante"
 msgid "Product"
 msgstr "Produto"
 
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Invalid configuration: {error}"
-msgstr "Configuração manual"
+msgstr "Configuração inválida: {error}"
 
 msgid "Type"
 msgstr "Tipo"
 
-#, fuzzy
 msgid "This option enables the number of parallel downloads that can occur during package downloads"
-msgstr "Esta opção habilita o número de downloads paralelos que podem ocorrer durante a instalação"
+msgstr "Esta opção habilita o número de downloads paralelos que podem ocorrer durante os downloads de pacotes"
 
-#, fuzzy
 msgid ""
 "Enter the number of parallel downloads to be enabled.\n"
 "\n"
 "Note:\n"
 msgstr ""
 "Insira o número de downloads paralelos para serem habilitados.\n"
-" (Insira um valor entre 1 e {})\n"
-"Observação:"
+"\n"
+"Observação:\n"
 
-#, fuzzy
 msgid " - Maximum recommended value : {} ( Allows {} parallel downloads at a time )"
-msgstr " - Valor máximo   : {} ( Permite {} downloads paralelos, permite {} downloads por vez )"
+msgstr " - Valor máximo recomendado : {} ( Permite {} downloads paralelos por vez )"
 
-#, fuzzy
 msgid " - Disable/Default : 0 ( Disables parallel downloading, allows only 1 download at a time )\n"
-msgstr " - Desativar/Padrão : 0 ( Desativa os downloads paralelos, permite apenas 1 download por vez )"
+msgstr " - Desativar/Padrão : 0 ( Desativa os downloads paralelos, permite apenas 1 download por vez )\n"
 
-#, fuzzy
 msgid "Invalid input! Try again with a valid input [or 0 to disable]"
-msgstr "Entrada inválida! Tente novamente com uma entrada válida [1 para {}, ou 0 para desativar]"
+msgstr "Entrada inválida! Tente novamente com uma entrada válida [ou 0 para desativar]"
 
-#, fuzzy
 msgid "Hyprland needs access to your seat (collection of hardware devices i.e. keyboard, mouse, etc)"
-msgstr "O Sway precisa de acesso ao seu seat (conjunto de dispositivos de hardware, como teclado, mouse, etc)"
+msgstr "O Hyprland precisa de acesso ao seu seat (conjunto de dispositivos de hardware, como teclado, mouse, etc)"
 
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -1226,12 +1213,11 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Selecione uma opção para permitir o acesso do Sway ao seu hardware"
+"Selecione uma opção para permitir o acesso do Hyprland ao seu hardware"
 
 msgid "All entered values can be suffixed with a unit: %, B, KB, KiB, MB, MiB..."
 msgstr "Todos os valores inseridos podem ser seguidos por uma unidade: B, KB, KiB, MB, MiB..."
 
-#, fuzzy
 msgid "Would you like to use unified kernel images?"
 msgstr "Deseja usar imagens de kernel unificados?"
 
@@ -1249,6 +1235,451 @@ msgstr "Pulando a espera pela sincronização automática de fuso horário (isso
 
 msgid "Waiting for Arch Linux keyring sync (archlinux-keyring-wkd-sync) to complete."
 msgstr "Aguardando a sincronização do Arch Linux Keyring (archlinux-keyring-wkd-sync) ser concluída."
+
+msgid "Selected profiles: "
+msgstr "Perfis selecionados: "
+
+msgid "Time synchronization not completing, while you wait - check the docs for workarounds: https://archinstall.readthedocs.io/"
+msgstr "Sincronização de fuso horário não concluída, enquanto você espera - confira a documentação para soluções alternativas: https://archinstall.readthedocs.io/"
+
+msgid "Mark/Unmark as nodatacow"
+msgstr "Marcar/desmarcar como nodatacow"
+
+msgid "Would you like to use compression or disable CoW?"
+msgstr "Você gostaria de usar compressão ou desativar a Cópia na Gravação?"
+
+msgid "Use compression"
+msgstr "Usar compressão"
+
+msgid "Disable Copy-on-Write"
+msgstr "Desativar Cópia na Gravação"
+
+msgid "Provides a selection of desktop environments and tiling window managers, e.g. GNOME, KDE Plasma, Sway"
+msgstr "Proporciona uma seleção de ambientes gráficos e gerenciadores de janela como por exemplo gnome, kde, sway"
+
+msgid "Configuration type: {}"
+msgstr "Tipo de configuração: {}"
+
+msgid "LVM configuration type"
+msgstr "Tipo de configuração LVM"
+
+msgid "LVM disk encryption with more than 2 partitions is currently not supported"
+msgstr "No momento, não há suporte para a criptografia de disco LVM com mais de duas partições"
+
+msgid "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE Plasma)"
+msgstr "Usar NetworkManager (necessário para configurar internet graficamente no GNOME e KDE)"
+
+msgid "Select a LVM option"
+msgstr "Selecione uma opção de LVM (Gerenciador de Volume Logico)"
+
+msgid "Partitioning"
+msgstr "Particionamento"
+
+msgid "Logical Volume Management (LVM)"
+msgstr "Gerenciamento de Volume Lógico (LVM)"
+
+msgid "Physical volumes"
+msgstr "Volumes físicos"
+
+msgid "Volumes"
+msgstr "Volumes"
+
+msgid "LVM volumes"
+msgstr "Volumes LVM"
+
+msgid "LVM volumes to be encrypted"
+msgstr "Volumes LVM a serem encriptados"
+
+msgid "Select which LVM volumes to encrypt"
+msgstr "Selecione quais volumes LVM encriptar"
+
+msgid "Default layout"
+msgstr "Layout padrão"
+
+msgid "No Encryption"
+msgstr "Sem encriptação"
+
+msgid "LUKS"
+msgstr "LUKS"
+
+msgid "LVM on LUKS"
+msgstr "LVM em LUKS"
+
+msgid "LUKS on LVM"
+msgstr "LUKS em LVM"
+
+msgid "Yes"
+msgstr "Sim"
+
+msgid "No"
+msgstr "Não"
+
+msgid "Archinstall help"
+msgstr "Ajuda do archinstall"
+
+msgid " (default)"
+msgstr " (padrão)"
+
+msgid "Press Ctrl+h for help"
+msgstr "Pressione Ctrl+h para ajuda"
+
+msgid "Choose an option to give Sway access to your hardware"
+msgstr "Selecione uma opção para permitir o acesso do Sway ao seu hardware"
+
+msgid "Seat access"
+msgstr ""
+
+msgid "Mountpoint"
+msgstr "Ponto de montagem"
+
+msgid "HSM"
+msgstr "Dispositivo HSM"
+
+msgid "Enter disk encryption password (leave blank for no encryption)"
+msgstr "Digite a senha de encriptação do disco (deixe em branco para não encriptar):"
+
+msgid "Disk encryption password"
+msgstr "Senha de encriptação do disco"
+
+msgid "Partition - New"
+msgstr "Partição - Nova"
+
+msgid "Filesystem"
+msgstr "Sistema de arquivos"
+
+msgid "Invalid size"
+msgstr ""
+
+msgid "Start (default: sector {}): "
+msgstr "Início (padrão: setor {}): "
+
+msgid "End (default: {}): "
+msgstr "Fim (padrão: {}): "
+
+msgid "Subvolume name"
+msgstr "Nome do subvolume"
+
+msgid "Disk configuration type"
+msgstr "Tipo de configuração do disco"
+
+#, fuzzy
+msgid "Root mount directory"
+msgstr "Diretório de montagem root"
+
+msgid "Select language"
+msgstr "Selecione uma linguagem"
+
+msgid "Write additional packages to install (space separated, leave blank to skip)"
+msgstr "Digite pacotes adicionais para instalar (separados por espaço, deixe em branco para pular):"
+
+msgid "Invalid download number"
+msgstr "Número de download inválido"
+
+msgid "Number downloads"
+msgstr "Número de downloads"
+
+msgid "The username you entered is invalid"
+msgstr "O nome de usuário que você digitou é inválido"
+
+msgid "Username"
+msgstr "Nome de usuário"
+
+msgid "Should \"{}\" be a superuser (sudo)?\n"
+msgstr "\"{}\" deve ser um superusuário (sudo)?\n"
+
+#, fuzzy
+msgid "Interfaces"
+msgstr "Adicionar interface"
+
+#, fuzzy
+msgid "You need to enter a valid IP in IP-config mode"
+msgstr "Você precisa fornecer um IP válido no modo IP-config"
+
+msgid "Modes"
+msgstr "Modos"
+
+msgid "IP address"
+msgstr "Endereço IP"
+
+msgid "Enter your gateway (router) IP address (leave blank for none)"
+msgstr "Digite o seu IP de gateway (roteador) (deixe em branco para nenhum)"
+
+msgid "Gateway address"
+msgstr "Endereço Gateway"
+
+msgid "Enter your DNS servers with space separated (leave blank for none)"
+msgstr "Digite os servidores DNS, separados por espaço, (deixe em branco para nenhum):"
+
+msgid "DNS servers"
+msgstr "Servidores DNS"
+
+#, fuzzy
+msgid "Configure interfaces"
+msgstr "{} interfaces configuradas"
+
+msgid "Kernel"
+msgstr "Kernel"
+
+#, fuzzy
+msgid "UEFI is not detected and some options are disabled"
+msgstr "UEFI não foi detectado e algumas opções estão desabilitadas"
+
+msgid "Info"
+msgstr "Informação"
+
+msgid "The proprietary Nvidia driver is not supported by Sway."
+msgstr "O driver proprietário Nvidia não é suportado pelo Sway."
+
+msgid "It is likely that you will run into issues, are you okay with that?"
+msgstr "É provável que você encontre problemas. Você está de acordo com isso?"
+
+msgid "Main profile"
+msgstr "Perfil principal"
+
+msgid "Confirm password"
+msgstr "Confirmar senha"
+
+#, fuzzy
+msgid "The confirmation password did not match, please try again"
+msgstr "A senha de confirmação não correspondeu a anterior, tente novamente"
+
+msgid "Not a valid directory"
+msgstr "Não é um diretório válido"
+
+msgid "Would you like to continue?"
+msgstr "Deseja continuar?"
+
+msgid "Directory"
+msgstr "Diretório"
+
+msgid "Enter a directory for the configuration(s) to be saved (tab completion enabled)"
+msgstr "Digite um diretório para as configurações serem salvas (completamento de tab ativado):"
+
+msgid "Do you want to save the configuration file(s) to {}?"
+msgstr "Você deseja salvar arquivo(s) de configuração para {}?"
+
+msgid "Enabled"
+msgstr "Habilitado"
+
+msgid "Disabled"
+msgstr "Desabilitado"
+
+msgid "Please submit this issue (and file) to https://github.com/archlinux/archinstall/issues"
+msgstr "Por favor, envie este problema (e o arquivo) para: https://github.com/archlinux/archinstall/issues"
+
+#, fuzzy
+msgid "Mirror name"
+msgstr "Região do mirror"
+
+msgid "Url"
+msgstr ""
+
+msgid "Select signature check"
+msgstr "Selecione uma opção de verificação de assinatura"
+
+msgid "Select execution mode"
+msgstr "Selecione um modo de execução"
+
+msgid "Press ? for help"
+msgstr "Pressione ? para ajuda"
+
+#, fuzzy
+msgid "Choose an option to give Hyprland access to your hardware"
+msgstr "Selecione uma opção para permitir o Hyprland acessar o seu hardware"
+
+msgid "Additional repositories"
+msgstr "Repositórios adicionais"
+
+msgid "NTP"
+msgstr "NTP"
+
+msgid "Swap on zram"
+msgstr "Swap em zram"
+
+msgid "Name"
+msgstr "Nome"
+
+#, fuzzy
+msgid "Signature check"
+msgstr "Selecione uma opção de verificação de assinatura"
+
+msgid "Selected free space segment on device {}:"
+msgstr "Segmentos de espaço livre no dispositivo {}:"
+
+msgid "Size: {} / {}"
+msgstr "Tamanho: {} / {}"
+
+msgid "Size (default: {}): "
+msgstr "Tamanho (padrão: {}): "
+
+msgid "HSM device"
+msgstr "Dispositivo HSM"
+
+msgid "Some packages could not be found in the repository"
+msgstr "Alguns pacotes não foram encontrados no repositório"
+
+msgid "User"
+msgstr "Usuário"
+
+msgid "The specified configuration will be applied"
+msgstr "A configuração especificada vai ser aplicada"
+
+msgid "Wipe"
+msgstr ""
+
+#, fuzzy
+msgid "Mark/Unmark as XBOOTLDR"
+msgstr "Marcar/desmarcar como inicializável"
+
+#, fuzzy
+msgid "Loading packages..."
+msgstr "Pacotes adicionais"
+
+msgid "Select any packages from the below list that should be installed additionally"
+msgstr ""
+
+#, fuzzy
+msgid "Add a custom repository"
+msgstr "Adicionar mirror personalizado"
+
+#, fuzzy
+msgid "Change custom repository"
+msgstr "Alterar mirror personalizado"
+
+#, fuzzy
+msgid "Delete custom repository"
+msgstr "Excluir mirror personalizado"
+
+#, fuzzy
+msgid "Repository name"
+msgstr "Região do mirror"
+
+#, fuzzy
+msgid "Add a custom server"
+msgstr "Adicionar mirror personalizado"
+
+#, fuzzy
+msgid "Change custom server"
+msgstr "Alterar mirror personalizado"
+
+#, fuzzy
+msgid "Delete custom server"
+msgstr "Excluir mirror personalizado"
+
+msgid "Server url"
+msgstr ""
+
+#, fuzzy
+msgid "Select regions"
+msgstr "Selecione uma opção de assinatura"
+
+#, fuzzy
+msgid "Add custom servers"
+msgstr "Adicionar mirror personalizado"
+
+#, fuzzy
+msgid "Add custom repository"
+msgstr "Adicionar mirror personalizado"
+
+#, fuzzy
+msgid "Loading mirror regions..."
+msgstr "Regiões dos mirrors"
+
+#, fuzzy
+msgid "Mirrors and repositories"
+msgstr "Repositórios opcionais"
+
+#, fuzzy
+msgid "Selected mirror regions"
+msgstr "Regiões dos mirrors"
+
+#, fuzzy
+msgid "Custom servers"
+msgstr "Mirrors personalizados"
+
+#, fuzzy
+msgid "Custom repositories"
+msgstr "Repositórios opcionais"
+
+msgid "Only ASCII characters are supported"
+msgstr ""
+
+msgid "Show help"
+msgstr ""
+
+msgid "Exit help"
+msgstr ""
+
+msgid "Preview scroll up"
+msgstr ""
+
+msgid "Preview scroll down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move right"
+msgstr ""
+
+msgid "Move left"
+msgstr ""
+
+msgid "Jump to entry"
+msgstr ""
+
+msgid "Skip selection (if available)"
+msgstr ""
+
+msgid "Reset selection (if available)"
+msgstr ""
+
+#, fuzzy
+msgid "Select on single select"
+msgstr "Selecione uma opção de verificação de assinatura"
+
+#, fuzzy
+msgid "Select on multi select"
+msgstr "Selecione um fuso horário"
+
+msgid "Reset"
+msgstr ""
+
+#, fuzzy
+msgid "Skip selection menu"
+msgstr "Selecione um modo de execução"
+
+msgid "Start search mode"
+msgstr ""
+
+msgid "Exit search mode"
+msgstr ""
+
+#, fuzzy
+msgid "labwc needs access to your seat (collection of hardware devices i.e. keyboard, mouse, etc)"
+msgstr "O Sway precisa de acesso ao seu seat (conjunto de dispositivos de hardware, como teclado, mouse, etc)"
+
+#, fuzzy
+msgid "Choose an option to give labwc access to your hardware"
+msgstr "Selecione uma opção para permitir o acesso do Sway ao seu hardware"
+
+#, fuzzy
+msgid "niri needs access to your seat (collection of hardware devices i.e. keyboard, mouse, etc)"
+msgstr "O Sway precisa de acesso ao seu seat (conjunto de dispositivos de hardware, como teclado, mouse, etc)"
+
+#, fuzzy
+msgid "Choose an option to give niri access to your hardware"
+msgstr "Selecione uma opção para permitir o acesso do Sway ao seu hardware"
+
+#, fuzzy
+msgid "Mark/Unmark as ESP"
+msgstr "Marcar/desmarcar como inicializável"
+
+msgid "Package group:"
+msgstr ""
 
 #~ msgid "When picking a directory to save configuration files to, by default we will ignore the following folders: "
 #~ msgstr "Ao selecionar um diretório para salvar arquivos de configuração, por padrão nós ignoramos as seguintes pastas: "

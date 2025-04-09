@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid "[!] A log file has been created here: {} {}"
 msgstr "[!] ஒரு பதிவு கோப்பு இங்கே உருவாக்கப்பட்டது: {} {}"
@@ -63,7 +63,7 @@ msgid "Copy ISO network configuration to installation"
 msgstr "நிறுவலுக்கு ISO பிணைய கட்டமைப்பு நகலெடுக்கவும்"
 
 msgid "Use NetworkManager (necessary for configuring internet graphically in GNOME and KDE)"
-msgstr "பயன்படுத்துங்கள் NetworkManager ஐப்(GNOME மற்றும் KDE இல் இணையத்தை வரைகலை முறையில் கட்டமைக்க அவசியம்)"
+msgstr "பயன்படுத்துங்கள் NetworkManager ஐப் (GNOME மற்றும் KDE இல் இணையத்தை வரைகலை முறையில் கட்டமைக்க அவசியம்)"
 
 msgid "Select one network interface to configure"
 msgstr "கட்டமைக்க ஒரு பிணைய இடைமுகத்தைத் தேர்ந்தெடுக்கவும்"
@@ -295,7 +295,7 @@ msgid "Automatic time sync (NTP)"
 msgstr "தானியங்கி நேர ஒத்திசைவு (NTP)"
 
 msgid "Install ({} config(s) missing)"
-msgstr "நிறுவு ({} config(கள்) இல்லை)"
+msgstr "நிறுவு ({} கட்டமைப்பு(கள்) இல்லை)"
 
 msgid ""
 "You decided to skip harddrive selection\n"
@@ -1227,3 +1227,498 @@ msgstr "தானியங்கி நேர ஒத்திசைவுக்�
 
 msgid "Waiting for Arch Linux keyring sync (archlinux-keyring-wkd-sync) to complete."
 msgstr "ஆர்ச் லினக்ஸ் கீரிங் ஒத்திசைவு (archlinux-keyring-wkd-sync) முடிவடைவதற்குக் காத்திருக்கிறது."
+
+msgid "Selected profiles: "
+msgstr "தேர்ந்தெடுக்கப்பட்ட சுயவிவரங்கள்: "
+
+msgid "Time synchronization not completing, while you wait - check the docs for workarounds: https://archinstall.readthedocs.io/"
+msgstr "நேரம் ஒத்திசைவு முடிவடையவில்லை, நீங்கள் காத்திருக்கும் போது - தீர்வுகளுக்கான ஆவணங்களைச் சரிபார்க்கவும்: https://archinstall.readthedocs.io/"
+
+msgid "Mark/Unmark as nodatacow"
+msgstr "nodatacow குறி/குறிநீக்கு"
+
+msgid "Would you like to use compression or disable CoW?"
+msgstr "நீங்கள் சுருக்கத்தைப் பயன்படுத்த விரும்புகிறீர்களா அல்லது CoW ஐ முடக்க விரும்புகிறீர்களா?"
+
+msgid "Use compression"
+msgstr "சுருக்கத்தைப் பயன்படுத்தவும்"
+
+msgid "Disable Copy-on-Write"
+msgstr "எழுத்தில் நகலை (CoW) முடக்கு"
+
+msgid "Provides a selection of desktop environments and tiling window managers, e.g. GNOME, KDE Plasma, Sway"
+msgstr "டெஸ்க்டாப் சூழல்கள் மற்றும் டைலிங் சாளர மேலாளர்களின் தேர்வை வழங்குகிறது, எ.கா. GNOME, KDE Plasma, Sway"
+
+msgid "Configuration type: {}"
+msgstr "உள்ளமைவு வகை: {}"
+
+msgid "LVM configuration type"
+msgstr "LVM கட்டமைப்பு வகை"
+
+msgid "LVM disk encryption with more than 2 partitions is currently not supported"
+msgstr "2க்கும் மேற்பட்ட பகிர்வுகளைக் கொண்ட LVM வட்டு குறியாக்கம் தற்போது ஆதரிக்கப்படவில்லை"
+
+msgid "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE Plasma)"
+msgstr "NetworkManager ஐப் பயன்படுத்தவும் (GNOME மற்றும் KDE Plasma இணையத்தை வரைகலை முறையில் கட்டமைக்க அவசியம்)"
+
+msgid "Select a LVM option"
+msgstr "LVM விருப்பத்தைத் தேர்ந்தெடுக்கவும்"
+
+msgid "Partitioning"
+msgstr "பிரித்தல்"
+
+msgid "Logical Volume Management (LVM)"
+msgstr "தருக்க தொகுதி மேலாண்மை (LVM)"
+
+msgid "Physical volumes"
+msgstr "இயற்பியல் தொகுதிகள்"
+
+msgid "Volumes"
+msgstr "தொகுதிகள்"
+
+msgid "LVM volumes"
+msgstr "LVM தொகுதிகள்"
+
+msgid "LVM volumes to be encrypted"
+msgstr "LVM தொகுதிகள் குறியாக்கம் செய்யப்பட வேண்டும்"
+
+msgid "Select which LVM volumes to encrypt"
+msgstr "எந்த LVM தொகுதிகளை குறியாக்கம் செய்ய வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்"
+
+msgid "Default layout"
+msgstr "இயல்புநிலை தளவமைப்பு"
+
+msgid "No Encryption"
+msgstr "குறியாக்கம் இல்லை"
+
+msgid "LUKS"
+msgstr "LUKS"
+
+msgid "LVM on LUKS"
+msgstr "LUKS இல் LVM"
+
+msgid "LUKS on LVM"
+msgstr "LVM இல் LUKS"
+
+msgid "Yes"
+msgstr "ஆமாம்"
+
+msgid "No"
+msgstr "இல்லை"
+
+msgid "Archinstall help"
+msgstr "Archinstall உதவி"
+
+msgid " (default)"
+msgstr "(இயல்புநிலை)"
+
+msgid "Press Ctrl+h for help"
+msgstr "உதவிக்கு Ctrl+h ஐ அழுத்தவும்"
+
+#, fuzzy
+msgid "Choose an option to give Sway access to your hardware"
+msgstr ""
+"\n"
+"\n"
+"உங்கள் வன்பொருளுக்கான அணுகலை வழங்குவதற்கான விருப்பத்தைத் தேர்வுசெய்யவும்"
+
+msgid "Seat access"
+msgstr ""
+
+#, fuzzy
+msgid "Mountpoint"
+msgstr "மவுண்ட்பாயிண்ட்: "
+
+msgid "HSM"
+msgstr ""
+
+#, fuzzy
+msgid "Enter disk encryption password (leave blank for no encryption)"
+msgstr "வட்டு குறியாக்க கடவுச்சொல்லை உள்ளிடவும் (குறியாக்கம் இல்லாமல் இருப்பதற்கு காலியாக விடவும்): "
+
+#, fuzzy
+msgid "Disk encryption password"
+msgstr "குறியாக்கம் கடவுச்சொல்"
+
+#, fuzzy
+msgid "Partition - New"
+msgstr "பகிர்வு"
+
+#, fuzzy
+msgid "Filesystem"
+msgstr "கோப்பு முறைமையை மாற்றவும்"
+
+msgid "Invalid size"
+msgstr ""
+
+#, fuzzy
+msgid "Start (default: sector {}): "
+msgstr "தொடக்கத்தை உள்ளிடவும் (இயல்பு: sector {}): "
+
+#, fuzzy
+msgid "End (default: {}): "
+msgstr "முடிவை உள்ளிடவும் (இயல்பு: {}): "
+
+#, fuzzy
+msgid "Subvolume name"
+msgstr "துணைத்தொகுதி பெயர் "
+
+#, fuzzy
+msgid "Disk configuration type"
+msgstr "வட்டு கட்டமைப்பு"
+
+msgid "Root mount directory"
+msgstr ""
+
+#, fuzzy
+msgid "Select language"
+msgstr "லோகேல் மொழி"
+
+#, fuzzy
+msgid "Write additional packages to install (space separated, leave blank to skip)"
+msgstr "நிறுவ கூடுதல் தொகுப்புகளை எழுதவும் (இடம் பிரிக்கப்பட்டது, தவிர்க்க காலியாக விடவும்): "
+
+msgid "Invalid download number"
+msgstr ""
+
+msgid "Number downloads"
+msgstr ""
+
+#, fuzzy
+msgid "The username you entered is invalid"
+msgstr "நீங்கள் உள்ளிட்ட பயனர்பெயர் தவறானது. மீண்டும் முயற்சிக்கவும்"
+
+#, fuzzy
+msgid "Username"
+msgstr "பயனர் பெயர்: "
+
+#, fuzzy
+msgid "Should \"{}\" be a superuser (sudo)?\n"
+msgstr "\"{}\" ஒரு சூப்பர் யூசராக (sudo) இருக்க வேண்டுமா?"
+
+#, fuzzy
+msgid "Interfaces"
+msgstr "இடைமுகத்தைச் சேர்க்கவும்"
+
+msgid "You need to enter a valid IP in IP-config mode"
+msgstr ""
+
+msgid "Modes"
+msgstr ""
+
+msgid "IP address"
+msgstr ""
+
+#, fuzzy
+msgid "Enter your gateway (router) IP address (leave blank for none)"
+msgstr "உங்கள் நுழைவாயில் (திசைவி) IP முகவரியை உள்ளிடவும் அல்லது எதற்கும் காலியாக விடவும்: "
+
+msgid "Gateway address"
+msgstr ""
+
+#, fuzzy
+msgid "Enter your DNS servers with space separated (leave blank for none)"
+msgstr "உங்கள் DNS சேவையகங்களை உள்ளிடவும் (இடம் பிரிக்கப்பட்டது, எதற்கும் காலியாக இல்லை): "
+
+#, fuzzy
+msgid "DNS servers"
+msgstr "ஆடியோ சர்வர் இல்லை"
+
+#, fuzzy
+msgid "Configure interfaces"
+msgstr "கட்டமைக்கப்பட்ட {} இடைமுகங்கள்"
+
+#, fuzzy
+msgid "Kernel"
+msgstr "கர்னல்கள்"
+
+msgid "UEFI is not detected and some options are disabled"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+#, fuzzy
+msgid "The proprietary Nvidia driver is not supported by Sway."
+msgstr "தனியுரிம Nvidia இயக்கி ஸ்வே ஆல் ஆதரிக்கப்படவில்லை. நீங்கள் சிக்கலில் சிக்க வாய்ப்புள்ளது, உனக்கு அது சரியா?"
+
+#, fuzzy
+msgid "It is likely that you will run into issues, are you okay with that?"
+msgstr "தனியுரிம Nvidia இயக்கி ஸ்வே ஆல் ஆதரிக்கப்படவில்லை. நீங்கள் சிக்கலில் சிக்க வாய்ப்புள்ளது, உனக்கு அது சரியா?"
+
+#, fuzzy
+msgid "Main profile"
+msgstr "சுயவிவரத்தைத் திருத்தவும்"
+
+#, fuzzy
+msgid "Confirm password"
+msgstr "கடவுச்சொல்லை மாற்று"
+
+msgid "The confirmation password did not match, please try again"
+msgstr ""
+
+#, fuzzy
+msgid "Not a valid directory"
+msgstr "சரியான கோப்பகம் இல்லை: {}"
+
+#, fuzzy
+msgid "Would you like to continue?"
+msgstr "BTRFS சுருக்கத்தைப் பயன்படுத்த விரும்புகிறீர்களா?"
+
+msgid "Directory"
+msgstr ""
+
+#, fuzzy
+msgid "Enter a directory for the configuration(s) to be saved (tab completion enabled)"
+msgstr ""
+"உள்ளமைவு(களை) சேமிக்கப்படுவதற்கான கோப்பகத்தை உள்ளிடவும் (தாவல் நிறைவு இயக்கப்பட்டது)\n"
+"கோப்பகத்தை சேமி: "
+
+#, fuzzy
+msgid "Do you want to save the configuration file(s) to {}?"
+msgstr ""
+"பின்வரும் இடத்தில் {} உள்ளமைவுக் கோப்பை(களை) சேமிக்க விரும்புகிறீர்களா?\n"
+"\n"
+"{}"
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+#, fuzzy
+msgid "Please submit this issue (and file) to https://github.com/archlinux/archinstall/issues"
+msgstr " இந்த சிக்கல் (மற்றும் கோப்பை) https://github.com/archlinux/archinstall/issues க்கு சமர்ப்பிக்கவும்"
+
+#, fuzzy
+msgid "Mirror name"
+msgstr "மிரர் பிராந்தியம்"
+
+msgid "Url"
+msgstr ""
+
+#, fuzzy
+msgid "Select signature check"
+msgstr "கையொப்ப சரிபார்ப்பு விருப்பத்தைத் தேர்ந்தெடுக்கவும்"
+
+#, fuzzy
+msgid "Select execution mode"
+msgstr "செயல்படுத்தும் பயன்முறையைத் தேர்ந்தெடுக்கவும்"
+
+#, fuzzy
+msgid "Press ? for help"
+msgstr "உதவிக்கு Ctrl+h ஐ அழுத்தவும்"
+
+#, fuzzy
+msgid "Choose an option to give Hyprland access to your hardware"
+msgstr ""
+"\n"
+"\n"
+"உங்கள் வன்பொருளுக்கு Hypland அணுகலை வழங்குவதற்கான விருப்பத்தைத் தேர்வு செய்யவும்"
+
+#, fuzzy
+msgid "Additional repositories"
+msgstr "விருப்ப களஞ்சியங்கள்"
+
+msgid "NTP"
+msgstr ""
+
+msgid "Swap on zram"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+#, fuzzy
+msgid "Signature check"
+msgstr "கையொப்ப சரிபார்ப்பு விருப்பத்தைத் தேர்ந்தெடுக்கவும்"
+
+#, fuzzy
+msgid "Selected free space segment on device {}:"
+msgstr "{} சாதனத்தில் தற்போதைய இலவசப் பிரிவுகள்:"
+
+#, fuzzy
+msgid "Size: {} / {}"
+msgstr "மொத்தம்: {} / {}"
+
+#, fuzzy
+msgid "Size (default: {}): "
+msgstr "முடிவை உள்ளிடவும் (இயல்பு: {}): "
+
+#, fuzzy
+msgid "HSM device"
+msgstr "சாதனம்"
+
+msgid "Some packages could not be found in the repository"
+msgstr ""
+
+#, fuzzy
+msgid "User"
+msgstr "பயனர் பெயர்: "
+
+msgid "The specified configuration will be applied"
+msgstr ""
+
+msgid "Wipe"
+msgstr ""
+
+#, fuzzy
+msgid "Mark/Unmark as XBOOTLDR"
+msgstr "துவக்கக்கூடியதாகக் குறி/குறிநீக்கு"
+
+#, fuzzy
+msgid "Loading packages..."
+msgstr "கூடுதல் தொகுப்புகள்"
+
+msgid "Select any packages from the below list that should be installed additionally"
+msgstr ""
+
+#, fuzzy
+msgid "Add a custom repository"
+msgstr "தனிப்பயன் கண்ணாடியைச் சேர்க்கவும்"
+
+#, fuzzy
+msgid "Change custom repository"
+msgstr "தனிப்பயன் கண்ணாடியை மாற்றவும்"
+
+#, fuzzy
+msgid "Delete custom repository"
+msgstr "தனிப்பயன் கண்ணாடியை நீக்கு"
+
+#, fuzzy
+msgid "Repository name"
+msgstr "மிரர் பிராந்தியம்"
+
+#, fuzzy
+msgid "Add a custom server"
+msgstr "தனிப்பயன் கண்ணாடியைச் சேர்க்கவும்"
+
+#, fuzzy
+msgid "Change custom server"
+msgstr "தனிப்பயன் கண்ணாடியை மாற்றவும்"
+
+#, fuzzy
+msgid "Delete custom server"
+msgstr "தனிப்பயன் கண்ணாடியை நீக்கு"
+
+msgid "Server url"
+msgstr ""
+
+#, fuzzy
+msgid "Select regions"
+msgstr "கையெழுத்து விருப்பத்தைத் தேர்ந்தெடுக்கவும்"
+
+#, fuzzy
+msgid "Add custom servers"
+msgstr "தனிப்பயன் கண்ணாடியைச் சேர்க்கவும்"
+
+#, fuzzy
+msgid "Add custom repository"
+msgstr "தனிப்பயன் கண்ணாடியைச் சேர்க்கவும்"
+
+#, fuzzy
+msgid "Loading mirror regions..."
+msgstr "கண்ணாடிப் பகுதிகள்"
+
+#, fuzzy
+msgid "Mirrors and repositories"
+msgstr "விருப்ப களஞ்சியங்கள்"
+
+#, fuzzy
+msgid "Selected mirror regions"
+msgstr "கண்ணாடிப் பகுதிகள்"
+
+#, fuzzy
+msgid "Custom servers"
+msgstr "தனிப்பயன் கண்ணாடிகள்"
+
+#, fuzzy
+msgid "Custom repositories"
+msgstr "விருப்ப களஞ்சியங்கள்"
+
+msgid "Only ASCII characters are supported"
+msgstr ""
+
+msgid "Show help"
+msgstr ""
+
+msgid "Exit help"
+msgstr ""
+
+msgid "Preview scroll up"
+msgstr ""
+
+msgid "Preview scroll down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move right"
+msgstr ""
+
+msgid "Move left"
+msgstr ""
+
+msgid "Jump to entry"
+msgstr ""
+
+msgid "Skip selection (if available)"
+msgstr ""
+
+msgid "Reset selection (if available)"
+msgstr ""
+
+#, fuzzy
+msgid "Select on single select"
+msgstr "கையொப்ப சரிபார்ப்பு விருப்பத்தைத் தேர்ந்தெடுக்கவும்"
+
+#, fuzzy
+msgid "Select on multi select"
+msgstr "நேர மண்டலத்தைத் தேர்ந்தெடுக்கவும்"
+
+msgid "Reset"
+msgstr ""
+
+#, fuzzy
+msgid "Skip selection menu"
+msgstr "செயல்படுத்தும் பயன்முறையைத் தேர்ந்தெடுக்கவும்"
+
+msgid "Start search mode"
+msgstr ""
+
+msgid "Exit search mode"
+msgstr ""
+
+#, fuzzy
+msgid "labwc needs access to your seat (collection of hardware devices i.e. keyboard, mouse, etc)"
+msgstr "ஸ்வேக்கு உங்கள் இருக்கைக்கான அணுகல் தேவை (வன்பொருள் சாதனங்களின் சேகரிப்பு அதாவது விசைப்பலகை, சுட்டி போன்றவை)"
+
+#, fuzzy
+msgid "Choose an option to give labwc access to your hardware"
+msgstr ""
+"\n"
+"\n"
+"உங்கள் வன்பொருளுக்கான அணுகலை வழங்குவதற்கான விருப்பத்தைத் தேர்வுசெய்யவும்"
+
+#, fuzzy
+msgid "niri needs access to your seat (collection of hardware devices i.e. keyboard, mouse, etc)"
+msgstr "ஸ்வேக்கு உங்கள் இருக்கைக்கான அணுகல் தேவை (வன்பொருள் சாதனங்களின் சேகரிப்பு அதாவது விசைப்பலகை, சுட்டி போன்றவை)"
+
+#, fuzzy
+msgid "Choose an option to give niri access to your hardware"
+msgstr ""
+"\n"
+"\n"
+"உங்கள் வன்பொருளுக்கான அணுகலை வழங்குவதற்கான விருப்பத்தைத் தேர்வுசெய்யவும்"
+
+#, fuzzy
+msgid "Mark/Unmark as ESP"
+msgstr "துவக்கக்கூடியதாகக் குறி/குறிநீக்கு"
+
+msgid "Package group:"
+msgstr ""

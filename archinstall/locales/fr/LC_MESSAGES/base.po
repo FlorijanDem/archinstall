@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-11-18 14:25+0100\n"
+"PO-Revision-Date: 2024-11-21 22:47+0100\n"
 "Last-Translator: Roxfr <roxfr@outlook.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid "[!] A log file has been created here: {} {}"
 msgstr "[!] Un fichier journal a été créé ici : {} {}"
@@ -903,7 +903,7 @@ msgid "Partition"
 msgstr "Partition"
 
 msgid "This partition is currently encrypted, to format it a filesystem has to be specified"
-msgstr "Cette partition est actuellement cryptée, pour la formater, un système de fichiers doit être spécifié"
+msgstr "Cette partition est actuellement chiffrée, pour la formater, un système de fichiers doit être spécifié"
 
 msgid "Partition mount-points are relative to inside the installation, the boot would be /boot as an example."
 msgstr "Les points de montage de partition sont relatifs à l'intérieur de l'installation, le démarrage serait /boot par exemple."
@@ -975,7 +975,7 @@ msgid "← Back"
 msgstr "← Retour"
 
 msgid "Disk encryption"
-msgstr "Cryptage du disque"
+msgstr "Chiffrement du disque"
 
 msgid "Configuration"
 msgstr "Configuration"
@@ -1208,23 +1208,469 @@ msgstr ""
 msgid "All entered values can be suffixed with a unit: %, B, KB, KiB, MB, MiB..."
 msgstr "Toutes les valeurs saisies peuvent être accompagnées par une unité : %, B, KB, KiB, MB, MiB..."
 
-#, fuzzy
 msgid "Would you like to use unified kernel images?"
-msgstr "Souhaitez-vous utiliser le swap sur zram ?"
+msgstr "Souhaitez-vous utiliser des images de noyau unifiées ?"
 
 msgid "Unified kernel images"
-msgstr ""
+msgstr "Images du noyau unifiées"
 
 msgid "Waiting for time sync (timedatectl show) to complete."
-msgstr ""
+msgstr "En attente de la fin de la synchronisation de l'heure (timedatectl show)."
 
 msgid "Time syncronization not completing, while you wait - check the docs for workarounds: https://archinstall.readthedocs.io/"
-msgstr ""
+msgstr "La synchronisation de l'heure ne se termine pas, veuillez consulter la documentation afin de trouver des solutions de contournement : https://archinstall.readthedocs.io/"
 
 msgid "Skipping waiting for automatic time sync (this can cause issues if time is out of sync during installation)"
-msgstr ""
+msgstr "Ignorer l'attente de la synchronisation automatique de l'heure (cela peut entraîner des problèmes si l'heure n'est pas synchronisée lors de l'installation)"
 
 msgid "Waiting for Arch Linux keyring sync (archlinux-keyring-wkd-sync) to complete."
+msgstr "En attente de la fin de la synchronisation du trousseau de clés d'Arch Linux (archlinux-keyring-wkd-sync)."
+
+msgid "Selected profiles: "
+msgstr "Profils sélectionnés : "
+
+msgid "Time synchronization not completing, while you wait - check the docs for workarounds: https://archinstall.readthedocs.io/"
+msgstr "La synchronisation de l'heure ne se termine pas, veuillez consulter la documentation afin de trouver des solutions de contournement : https://archinstall.readthedocs.io/"
+
+msgid "Mark/Unmark as nodatacow"
+msgstr "Marquer/Démarquer comme nodatacow"
+
+msgid "Would you like to use compression or disable CoW?"
+msgstr "Souhaitez-vous utiliser la compression ou désactiver la copie à l'écriture (CoW) ?"
+
+msgid "Use compression"
+msgstr "Utiliser la compression"
+
+msgid "Disable Copy-on-Write"
+msgstr "Désactiver la copie à l'écriture (CoW)"
+
+msgid "Provides a selection of desktop environments and tiling window managers, e.g. GNOME, KDE Plasma, Sway"
+msgstr "Fournit une sélection d'environnements de bureau et de gestionnaires de fenêtres en mosaïque, par ex. GNOME, KDE Plasma, Sway"
+
+msgid "Configuration type: {}"
+msgstr "Type de configuration : {}"
+
+msgid "LVM configuration type"
+msgstr "Type de configuration LVM"
+
+msgid "LVM disk encryption with more than 2 partitions is currently not supported"
+msgstr "Le chiffrement de disque LVM avec plus de 2 partitions n'est actuellement pas pris en charge"
+
+msgid "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE Plasma)"
+msgstr "Utiliser NetworkManager (nécessaire pour configurer internet graphiquement dans GNOME et KDE Plasma)"
+
+msgid "Select a LVM option"
+msgstr "Sélectionner une option LVM"
+
+msgid "Partitioning"
+msgstr "Partitionnement"
+
+msgid "Logical Volume Management (LVM)"
+msgstr "Gestion des volumes logiques (LVM)"
+
+msgid "Physical volumes"
+msgstr "Volumes physiques"
+
+msgid "Volumes"
+msgstr "Volumes"
+
+msgid "LVM volumes"
+msgstr "Volumes LVM"
+
+msgid "LVM volumes to be encrypted"
+msgstr "Volumes LVM à chiffrer"
+
+msgid "Select which LVM volumes to encrypt"
+msgstr "Sélectionner les volumes LVM à chiffrer"
+
+msgid "Default layout"
+msgstr "Disposition par défaut"
+
+msgid "No Encryption"
+msgstr "Pas de chiffrement"
+
+msgid "LUKS"
+msgstr "Configuration de la clé unifiée Linux (LUKS)"
+
+msgid "LVM on LUKS"
+msgstr "LVM sur LUKS (sécurité maximale)"
+
+msgid "LUKS on LVM"
+msgstr "LUKS sur LVM (flexibilité)"
+
+msgid "Yes"
+msgstr "Oui"
+
+msgid "No"
+msgstr "Non"
+
+msgid "Archinstall help"
+msgstr "Aide pour Archinstall"
+
+msgid " (default)"
+msgstr " (par défaut)"
+
+msgid "Press Ctrl+h for help"
+msgstr "Appuyer sur Ctrl+h pour obtenir de l'aide"
+
+msgid "Choose an option to give Sway access to your hardware"
+msgstr "Choisir une option pour permettre à Sway d'accéder à votre matériel"
+
+msgid "Seat access"
+msgstr "Accès au siège"
+
+msgid "Mountpoint"
+msgstr "Point de montage"
+
+msgid "HSM"
+msgstr "Gestion hiérarchique du stockage (HSM)"
+
+msgid "Enter disk encryption password (leave blank for no encryption)"
+msgstr "Entrer le mot de passe de chiffrement du disque (laisser vide pour aucun chiffrement)"
+
+msgid "Disk encryption password"
+msgstr "Mot de passe de chiffrement du disque"
+
+msgid "Partition - New"
+msgstr "Partition - Nouvelle"
+
+msgid "Filesystem"
+msgstr "Système de fichiers"
+
+msgid "Invalid size"
+msgstr "Taille invalide"
+
+msgid "Start (default: sector {}): "
+msgstr "Démarrer (par défaut : secteur {}): "
+
+msgid "End (default: {}): "
+msgstr "Fin (par défaut : {}): "
+
+msgid "Subvolume name"
+msgstr "Nom du sous-volume"
+
+msgid "Disk configuration type"
+msgstr "Type de configuration du disque"
+
+msgid "Root mount directory"
+msgstr "Répertoire de montage racine"
+
+msgid "Select language"
+msgstr "Sélectionner la langue"
+
+msgid "Write additional packages to install (space separated, leave blank to skip)"
+msgstr "Écrire les paquets supplémentaires à installer (séparés par des espaces, laisser vide pour ignorer)"
+
+msgid "Invalid download number"
+msgstr "Numéro de téléchargement invalide"
+
+msgid "Number downloads"
+msgstr "Nombre de téléchargements"
+
+msgid "The username you entered is invalid"
+msgstr "Le nom d'utilisateur que vous avez saisi est invalide"
+
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+msgid "Should \"{}\" be a superuser (sudo)?\n"
+msgstr "Le \"{}\" doit-il être un superutilisateur (sudo) ?\n"
+
+msgid "Interfaces"
+msgstr "Interfaces"
+
+msgid "You need to enter a valid IP in IP-config mode"
+msgstr "Vous devez entrer une adresse IP valide en mode IP-config"
+
+msgid "Modes"
+msgstr "Modes"
+
+msgid "IP address"
+msgstr "Adresse IP"
+
+msgid "Enter your gateway (router) IP address (leave blank for none)"
+msgstr "Entrer l'adresse IP de votre passerelle (routeur) (laisser vide pour aucun)"
+
+msgid "Gateway address"
+msgstr "Adresse de passerelle"
+
+msgid "Enter your DNS servers with space separated (leave blank for none)"
+msgstr "Entrer vos serveurs DNS séparés par des espaces (laisser vide pour aucun)"
+
+msgid "DNS servers"
+msgstr "Serveurs DNS"
+
+msgid "Configure interfaces"
+msgstr "Configurer les interfaces"
+
+msgid "Kernel"
+msgstr "Noyau"
+
+msgid "UEFI is not detected and some options are disabled"
+msgstr "L'UEFI n'est pas détecté et certaines options sont désactivées"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "The proprietary Nvidia driver is not supported by Sway."
+msgstr "Le pilote propriétaire Nvidia n'est pas supporté par Sway."
+
+msgid "It is likely that you will run into issues, are you okay with that?"
+msgstr "Il est probable que vous rencontriez des problèmes, êtes-vous d'accord avec cela ?"
+
+msgid "Main profile"
+msgstr "Profil principal"
+
+msgid "Confirm password"
+msgstr "Confirmer le mot de passe"
+
+msgid "The confirmation password did not match, please try again"
+msgstr "Le mot de passe de confirmation ne correspond pas, veuillez réessayer"
+
+msgid "Not a valid directory"
+msgstr "Ce n'est pas un répertoire valide"
+
+msgid "Would you like to continue?"
+msgstr "Voulez-vous continuer ?"
+
+msgid "Directory"
+msgstr "Répertoire"
+
+msgid "Enter a directory for the configuration(s) to be saved (tab completion enabled)"
+msgstr "Entrer un répertoire pour que la(les) configuration(s) soit(ent) enregistrée(s) (complétion par tabulation activée)"
+
+msgid "Do you want to save the configuration file(s) to {}?"
+msgstr "Voulez-vous enregistrer le(s) fichier(s) de configuration dans {} ?"
+
+msgid "Enabled"
+msgstr "Activé"
+
+msgid "Disabled"
+msgstr "Désactivé"
+
+msgid "Please submit this issue (and file) to https://github.com/archlinux/archinstall/issues"
+msgstr "Veuillez soumettre ce problème (et ce fichier) à https://github.com/archlinux/archinstall/issues"
+
+msgid "Mirror name"
+msgstr "Nom du miroir"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Select signature check"
+msgstr "Sélectionner la vérification de la signature"
+
+msgid "Select execution mode"
+msgstr "Sélectionner le mode d'exécution"
+
+msgid "Press ? for help"
+msgstr "Appuyer sur ? pour l'aide"
+
+#, fuzzy
+msgid "Choose an option to give Hyprland access to your hardware"
+msgstr ""
+"\n"
+"\n"
+"Choisir une option pour donner à Hyprland l'accès à votre matériel"
+
+#, fuzzy
+msgid "Additional repositories"
+msgstr "Dépôts supplémentaires"
+
+msgid "NTP"
+msgstr ""
+
+msgid "Swap on zram"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+#, fuzzy
+msgid "Signature check"
+msgstr "Sélectionner la vérification de la signature"
+
+#, fuzzy
+msgid "Selected free space segment on device {}:"
+msgstr "Secteurs actuellement libres sur le périphérique {} :"
+
+#, fuzzy
+msgid "Size: {} / {}"
+msgstr "Total (taille) : {} / {}"
+
+#, fuzzy
+msgid "Size (default: {}): "
+msgstr "Fin (par défaut : {}): "
+
+#, fuzzy
+msgid "HSM device"
+msgstr "Dispositif"
+
+msgid "Some packages could not be found in the repository"
+msgstr ""
+
+#, fuzzy
+msgid "User"
+msgstr "Nom d'utilisateur"
+
+msgid "The specified configuration will be applied"
+msgstr ""
+
+msgid "Wipe"
+msgstr ""
+
+#, fuzzy
+msgid "Mark/Unmark as XBOOTLDR"
+msgstr "Marquer/Démarquer comme amorçable"
+
+#, fuzzy
+msgid "Loading packages..."
+msgstr "Paquets supplémentaires"
+
+msgid "Select any packages from the below list that should be installed additionally"
+msgstr ""
+
+#, fuzzy
+msgid "Add a custom repository"
+msgstr "Ajouter un miroir personnalisé"
+
+#, fuzzy
+msgid "Change custom repository"
+msgstr "Changer le miroir personnalisé"
+
+#, fuzzy
+msgid "Delete custom repository"
+msgstr "Supprimer le miroir personnalisé"
+
+#, fuzzy
+msgid "Repository name"
+msgstr "Nom du miroir"
+
+#, fuzzy
+msgid "Add a custom server"
+msgstr "Ajouter un miroir personnalisé"
+
+#, fuzzy
+msgid "Change custom server"
+msgstr "Changer le miroir personnalisé"
+
+#, fuzzy
+msgid "Delete custom server"
+msgstr "Supprimer le miroir personnalisé"
+
+msgid "Server url"
+msgstr ""
+
+#, fuzzy
+msgid "Select regions"
+msgstr "Sélectionner l'option de signature"
+
+#, fuzzy
+msgid "Add custom servers"
+msgstr "Ajouter un miroir personnalisé"
+
+#, fuzzy
+msgid "Add custom repository"
+msgstr "Ajouter un miroir personnalisé"
+
+#, fuzzy
+msgid "Loading mirror regions..."
+msgstr "Régions miroir"
+
+#, fuzzy
+msgid "Mirrors and repositories"
+msgstr "Dépôts supplémentaires"
+
+#, fuzzy
+msgid "Selected mirror regions"
+msgstr "Régions miroir"
+
+#, fuzzy
+msgid "Custom servers"
+msgstr "Miroirs personnalisés"
+
+#, fuzzy
+msgid "Custom repositories"
+msgstr "Dépôts supplémentaires"
+
+msgid "Only ASCII characters are supported"
+msgstr ""
+
+msgid "Show help"
+msgstr ""
+
+msgid "Exit help"
+msgstr ""
+
+msgid "Preview scroll up"
+msgstr ""
+
+msgid "Preview scroll down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move right"
+msgstr ""
+
+msgid "Move left"
+msgstr ""
+
+msgid "Jump to entry"
+msgstr ""
+
+msgid "Skip selection (if available)"
+msgstr ""
+
+msgid "Reset selection (if available)"
+msgstr ""
+
+#, fuzzy
+msgid "Select on single select"
+msgstr "Sélectionner la vérification de la signature"
+
+#, fuzzy
+msgid "Select on multi select"
+msgstr "Sélectionner un fuseau horaire"
+
+msgid "Reset"
+msgstr ""
+
+#, fuzzy
+msgid "Skip selection menu"
+msgstr "Sélectionner le mode d'exécution"
+
+msgid "Start search mode"
+msgstr ""
+
+msgid "Exit search mode"
+msgstr ""
+
+#, fuzzy
+msgid "labwc needs access to your seat (collection of hardware devices i.e. keyboard, mouse, etc)"
+msgstr "Sway a besoin d'accéder à votre espace (ensemble de périphériques matériels : clavier, souris, etc.)"
+
+#, fuzzy
+msgid "Choose an option to give labwc access to your hardware"
+msgstr "Choisir une option pour permettre à Sway d'accéder à votre matériel"
+
+#, fuzzy
+msgid "niri needs access to your seat (collection of hardware devices i.e. keyboard, mouse, etc)"
+msgstr "Sway a besoin d'accéder à votre espace (ensemble de périphériques matériels : clavier, souris, etc.)"
+
+#, fuzzy
+msgid "Choose an option to give niri access to your hardware"
+msgstr "Choisir une option pour permettre à Sway d'accéder à votre matériel"
+
+#, fuzzy
+msgid "Mark/Unmark as ESP"
+msgstr "Marquer/Démarquer comme amorçable"
+
+msgid "Package group:"
 msgstr ""
 
 #, python-brace-format
